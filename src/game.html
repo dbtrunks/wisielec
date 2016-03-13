@@ -1,0 +1,40 @@
+<template>
+  <section class="au-animate">
+    <h2>${heading}</h2>
+	<div class="splash">
+      <div>
+		<h1 >Gra w wisielca </h1>
+      </div>
+      <div class="text-right">${points}</div>
+      <div if.bind="!showBt"><h2 class="clue">${clue1}</h2></div>
+      <br>
+    <div class="container">
+    <button type="button"  class="btn btn-default" if.bind="showBt" click.trigger="castLots()">Losuj hasło</button>
+
+      <div class="row">
+        <div class="col-md-6 canvas"><h3>${lapse}</h3></div>
+        <div class="col-md-5 letters" >
+              <div  if.bind="!win">
+                <input class="btn btn-default btn-lg active"  type="button" repeat.for="l of letters" value="${l}" id="#${l}"  click.trigger="choiceLeatter(l)" />
+               </div>
+               <div  if.bind="win">
+                   Tak jest, odgadłeś hasło!
+                   </br>
+                   Uzyskałeś ${points} punktów.
+                   </br>
+                   <button type="button"  class="btn btn-default"  click.trigger="castLots()">Kolejne hasło</button>
+               </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+      </div>
+
+	
+  </section>
+  
+  
+</template>
