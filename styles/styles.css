@@ -6,6 +6,7 @@ body {
   text-align: center;
   margin: 30 0 0 0;
   box-sizing: border-box;
+  overflow-y:hidden;
 }
 
 .splash .message {
@@ -195,6 +196,7 @@ div.au-stagger {
     background-color: darksalmon;
     margin: 10px;
     height: 400px;
+    
 }
 
 .letters{
@@ -208,4 +210,5 @@ div.au-stagger {
     font-family: 'Inconsolata' ;
     font-size: 28px;
     font-weight: 700;
+    margin: 0;
 }
